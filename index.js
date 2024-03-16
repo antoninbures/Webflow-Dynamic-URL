@@ -13,14 +13,14 @@ $(document).ready(function() {
     // Determine the correct hostname and pathname adjustment based on environment and language.
     if(document.location.hostname.includes('webflow.io')) {
       // Staging environment.
-      new_url.hostname = 'kampus-hybernska.webflow.io';
+      new_url.hostname = '[YOUR STAGING DOMAIN]';
       if (isEnglish) {
         // Ensure the pathname includes '/en/' for English links on staging.
         new_url.pathname = '/en' + new_url.pathname.replace(/^\/?/, '/');
       }
     } else {
       // Production environment.
-      new_url.hostname = 'kampushybernska.cz';
+      new_url.hostname = '[YOUR MAIN DOMAIN]';
       if (isEnglish) {
         // Ensure the pathname includes '/en/' for English links on production.
         new_url.pathname = '/en' + new_url.pathname.replace(/^\/?/, '/');
